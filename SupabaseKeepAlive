@@ -1,6 +1,9 @@
 name: Supabase Keep-Alive
 
 on:
+  push:      # <--- Add this line
+    branches:
+      - main
   schedule:
     # Runs at 00:00 every Tuesday and Friday (keeps it under the 7-day limit)
     - cron: '0 0 * * 2,5'
